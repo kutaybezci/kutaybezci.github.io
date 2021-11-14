@@ -1,1 +1,41 @@
-<p>merge works!</p>
+<div>
+    <table width="300px">
+        <tr>
+            <td>Score:</td>
+            <td>{{game.score}}</td>
+        </tr>
+        <tr>
+            <td>Special:</td>
+            <td>{{game.special}}</td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td>{{game.state}}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <table style="border: 1px solid white;">
+        <tr *ngFor="let row of board; let r=index">
+            <td *ngFor="let rc of row; let c=index" (click)="onClick(r,c)" [ngStyle]="getStyle(rc, r,c)">{{rc}}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td [ngStyle]="getStyle(game.nextNumber,0,0)">{{game.nextNumber}}</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td (click)="selectCrush()" [ngStyle]="{'background-color': crushSelected? 'white':'black'}">
+                <img src="assets/hammer.png">
+            </td>
+            <td (click)="selectChange()" [ngStyle]="{'background-color': changeSelected? 'white':'black'}">
+                <img src="assets/change.png">
+            </td>
+            <td (click)="undo()">
+                <img src="assets/undo.png">
+            </td>
+        </tr>
+    </table>
+</div>
