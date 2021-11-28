@@ -12,7 +12,7 @@ export class Merge {
     inputMin: number = 1;
     inputMax: number;
     next: number;
-    message: string = 'Ulkume';
+    message: string = 'Ulkum\'e';
     changeStack: [number, number][] = [];
     static readonly UnsetIndex: [number, number] = [-1, -1];
     toBeChanged: [number, number] = Merge.UnsetIndex;
