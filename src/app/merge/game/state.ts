@@ -1,3 +1,7 @@
 export enum State {
-    Playing = 'Playing', InTurn = 'Inturn', GameOver = 'GameOver'
+    Playing = 'Playing',
+    Ingame = 'Ingame',
+    Changing = 'Changing',
+    Crushing = 'Crushing',
+    GameOver = 'Game Over!'
 }

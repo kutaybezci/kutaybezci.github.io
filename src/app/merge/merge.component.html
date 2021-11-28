@@ -12,6 +12,9 @@
             <td>State:</td>
             <td>{{game.state}}</td>
         </tr>
+        <tr *ngIf="game.message!=null">
+            <td>{{game.message}}</td>
+        </tr>
     </table>
 </div>
 <div>
@@ -20,9 +23,9 @@
             <td *ngFor="let rc of row; let c=index" (click)="onClick(r,c)" [ngStyle]="getStyle(rc, r,c)">{{rc}}</td>
         </tr>
     </table>
-    <table>
+    <table *ngIf="canDisplayNext()">
         <tr>
-            <td [ngStyle]="getStyle(game.nextNumber,0,0)">{{game.nextNumber}}</td>
+            <td [ngStyle]="getStyle(game.next,0,0)">{{game.next}}</td>
         </tr>
     </table>
     <table>
