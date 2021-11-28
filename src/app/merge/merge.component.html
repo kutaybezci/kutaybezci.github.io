@@ -4,10 +4,10 @@
             <td>Score:</td>
             <td>{{game.score}}</td>
         </tr>
-        <tr>
+        <!--<tr>
             <td>Special:</td>
             <td>{{game.special}}</td>
-        </tr>
+        </tr>-->
         <tr>
             <td>State:</td>
             <td>{{game.state}}</td>
@@ -28,7 +28,7 @@
             <td [ngStyle]="getStyle(game.next,0,0)">{{game.next}}</td>
         </tr>
     </table>
-    <table>
+    <!--<table>
         <tr>
             <td (click)="selectCrush()" [ngStyle]="{'background-color': crushSelected? 'white':'black'}">
                 <img src="assets/hammer.png">
@@ -40,5 +40,5 @@
                 <img src="assets/undo.png">
             </td>
         </tr>
-    </table>
+    </table>-->
 </div>
